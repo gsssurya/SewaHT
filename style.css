@@ -1,0 +1,180 @@
+/*General style*/
+
+:root{
+  --dark-g : rgb(28, 59, 55);
+  --yellow : #FFC40C;
+}
+a{
+  display: flex;
+  align-items: center;
+  outline: none;
+  text-decoration: none;
+  justify-content: center;
+  color: white;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  color: white;
+  background-color: black;
+  height: 100vh;
+}
+
+/*Navbar style start*/
+.navbar {
+  background-color: rgba(28, 59, 55, 0.75);
+  height: 90px;
+  padding: 0 99px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: height 0.25s, padding 0.25s;
+}
+
+.navbar .nav{
+  display: flex;
+  align-items: center;
+}
+.navbar .nav a{
+  margin: 0 21.5px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+}
+.navbar .nav a::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: rgba(45, 146, 132, 0.75);
+  border-radius: 5px;
+  bottom: -9px;
+  scale: 0;
+  transition: scale 0.15s;
+}
+.navbar .nav a:hover::after {
+  scale: 1;
+}
+.navbar .extra {
+  display: flex;
+  flex-direction: row;
+}
+.navbar .extra a{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  transition: background-color 0.15s;
+  position: relative;
+}
+#menu{
+  display: none;
+}
+.navbar .extra a:hover {
+ background-color: rgba(45, 146, 132,0.25);
+ .tooltips {
+  opacity: 1;
+  transition: opacity 0.15s;
+  transition-delay: 0.5s;
+ }
+}
+.navbar .extra a .tooltips {
+  position: absolute;
+  padding: 6px 12px;
+  background-color: rgba(88, 88, 88, 0.75);
+  font-size: 11px;
+  white-space: nowrap;
+  bottom: -30px;
+  opacity: 0;
+}
+#close {
+  display: none;
+}
+
+/*Media Query*/
+/*Tablet*/
+@media (max-width: 980px) {
+  .navbar {
+    height: 60px;
+    padding: 0 45px;
+  }
+  #logo svg {
+    height: 30.82px;
+    width: 46.33px;
+  }
+  .navbar .extra a{
+    width: 42px;
+    height: 42px;
+  }
+  .navbar  .extra a svg{
+    width: 20px;
+    height: 19px;
+  }
+}
+
+/*Mobile Phone*/
+@media (max-width: 790px) {
+  .navbar {
+    padding: 0 24px;
+  }
+  .navbar .nav{
+    position: fixed;
+    flex-direction: column;
+    right: -1000px;
+    top: 0;
+    bottom: 0;
+    background-color: var(--dark-g);
+    align-items: start;
+    width: 70%;
+    z-index: 999;
+    gap: 10px;
+    padding-top: 60px;
+    transition: right 0.5s;
+  }
+  #menu {
+    display: flex;
+  }
+  .navbar .nav a{
+    font-size: 20px;
+    height: 60px;
+    margin: 0;
+    padding-left: 40px;
+    width: 100%;
+    justify-content: start;
+    transition: background-color 0.15s;
+  }
+  .navbar .nav a::after{
+    display: none;
+  }
+  .navbar .nav a:hover {
+    background-color: rgba(45, 146, 132, 0.35);
+  }
+  #close {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 40px;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+  #close svg{
+    transition: scale 0.15s;
+    scale: 1.3;
+  }
+ 
+  #close:hover{
+    background-color: transparent;
+    svg{
+      scale: 1.8;
+    }
+  }
+}
