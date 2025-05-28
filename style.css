@@ -1,0 +1,334 @@
+/*General style start*/
+:root{
+  --dark-g : rgb(28, 59, 55);
+  --yellow : #FFC40C;
+}
+a{
+  display: flex;
+  align-items: center;
+  outline: none;
+  text-decoration: none;
+  justify-content: center;
+  color: white;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  color: white;
+  height: 100vh;
+}
+/*General style end*/
+
+/*Navbar style start*/
+.navbar {
+  background-color: rgba(28, 59, 55, 0.75);
+  height: 90px;
+  padding: 0 99px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: height 0.25s, padding 0.25s;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 998;
+}
+#black-screen{
+  display: none;
+}
+.navbar .nav{
+  display: flex;
+  align-items: center;
+}
+.navbar .nav a{
+  margin: 0 21.5px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+}
+.navbar .nav a::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: rgba(45, 146, 132, 0.75);
+  border-radius: 5px;
+  bottom: -9px;
+  scale: 0;
+  transition: scale 0.15s;
+}
+.navbar .nav a:hover::after {
+  scale: 1;
+}
+.navbar .extra {
+  display: flex;
+  flex-direction: row;
+}
+.navbar .extra a{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  transition: background-color 0.15s;
+  position: relative;
+}
+#menu{
+  display: none;
+}
+.navbar .extra a:hover {
+ background-color: rgba(45, 146, 132,0.25);
+ .tooltips {
+  opacity: 1;
+  transition: opacity 0.15s;
+  transition-delay: 0.5s;
+ }
+}
+.navbar .extra a .tooltips {
+  position: absolute;
+  padding: 6px 12px;
+  background-color: rgba(88, 88, 88, 0.75);
+  font-size: 11px;
+  white-space: nowrap;
+  bottom: -30px;
+  opacity: 0;
+}
+#close {
+  display: none;
+}
+
+/*Media Query*/
+/*Tablet*/
+@media (max-width: 980px) {
+  .navbar {
+    height: 60px;
+    padding: 0 45px;
+  }
+  #logo svg {
+    height: 30.82px;
+    width: 46.33px;
+  }
+  .navbar .extra a{
+    width: 42px;
+    height: 42px;
+  }
+  .navbar  .extra a svg{
+    width: 20px;
+    height: 19px;
+  }
+}
+
+/*Mobile Phone*/
+@media (max-width: 790px) {
+  .navbar {
+    padding: 0 24px;
+  }
+  .navbar .nav{
+    position: fixed;
+    flex-direction: column;
+    right: -1000px;
+    top: 0;
+    bottom: 0;
+    background-color: var(--dark-g);
+    align-items: start;
+    width: 70%;
+    z-index: 1000;
+    gap: 10px;
+    padding-top: 60px;
+    transition: right 0.5s;
+  }
+  
+  #menu {
+    display: flex;
+  }
+  .navbar .nav a{
+    font-size: 20px;
+    height: 60px;
+    margin: 0;
+    padding-left: 40px;
+    width: 100%;
+    justify-content: start;
+    transition: background-color 0.15s;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .navbar .nav a::after{
+    display: none;
+  }
+  .navbar .nav a:hover {
+    background-color: rgba(45, 146, 132, 0.35);
+  }
+  #close {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 40px;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+  #close svg{
+    transition: scale 0.15s;
+  }
+ 
+  #close:hover{
+    background-color: transparent;
+    svg{
+      scale: 1.5;
+    }
+  }
+  #black-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.45);
+  }
+}
+/*Navbar style end*/
+
+/*Hero style start*/
+.hero{
+  width: 100vw;
+  height: 100vh;
+  background: url(img/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.hero .top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin-top: 90px;
+}
+.hero .top .left{
+  font-size: 56px;
+  font-style: italic;
+  font-weight: 300;
+  transition: font-size 0.25s;
+}
+.hero .top .right{
+  font-size: 56px;
+  font-style: italic;
+  font-weight: 300;
+  max-width: 390px;
+  text-align: end;
+  transition: font-size 0.25s;
+}
+.hero .top .right span{
+  font-size: 50px;
+  font-weight: 200;
+  transition: font-size 0.25s;
+}
+.hero .bottom {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  bottom: 33px;
+  transition: scale 0.25s;
+
+}
+.hero .bottom a {
+  font-size: 24px;
+  font-weight: 700;
+  width: 276px;
+  height: 58px;
+  border-radius: 30px;
+  border: 1px solid white;
+  transition: background-color 0.25s, border, 0.15s, color 0.15s,  width 0.25s, height 0.25s, font-size 0.25s;
+}
+.hero .bottom a:hover{
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.hero .bottom a:active{
+  background-color: white;
+  border: black solid 1px;
+  color: black;
+}
+.hero .bottom p{
+  font-size: 20px;
+  font-weight: 300;
+  transition: font-size 0.25s;
+}
+
+/*Media Query*/
+/*Tablet*/
+@media (max-width: 980px) {
+  .hero .top{
+    margin-top: 60px;
+  }
+ .hero .top .left, .hero .top .right {
+  font-size: 44px;
+ }
+ .hero .top .right span {
+  font-size: 38px;
+ }
+ .hero .bottom{
+  scale: 0.8;
+ }
+}
+
+/*Mobile Phone*/
+@media (max-width: 790px) {
+  .hero{
+    background: url(img/hero-bg-vertical.png);
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    gap: 43px;
+  }
+  .hero .top{
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    flex: 1;
+    margin-top: 128px;
+  }
+  .hero .top .right{
+    text-align: center;
+  }
+  .hero .top .left{
+    font-size: 36px;
+  }
+  .hero .top .right, .hero .top .right p{
+    font-size: 24px;
+  }
+  .hero .top .right span{
+    font-size: 36px;
+  }
+  .hero .bottom{
+    position: relative;
+    margin-bottom: 56px;
+    bottom: 0;
+    scale: 1;
+    gap: 12px;
+  }
+  .hero .bottom a{
+    width: 223px;
+    height: 34.42px;
+    font-size: 14px;
+  }
+  .hero .bottom p{
+    font-size: 12px;
+  }
+}
+/*Hero style end*/
