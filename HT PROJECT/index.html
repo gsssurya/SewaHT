@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sewa HT | Kamera Abiansemal</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Style-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="loading-screen" id="loadingScreen">
+      <div id="tupai"></div>
+      <div id="bola"></div>
+    </section>
+    <!--Navbar start-->
+    <nav class="navbar" id="navbar">
+      <a href="#" class="logo" id="logo"></a>
+      <div class="nav" id="navbar-nav">
+        <a id="close"><i data-feather="x"></i></a>
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#produk" onclick="closeMenu()">Produk</a>
+        <a href="#kontak" onclick="closeMenu()">Kontak</a>
+        <a href="#riwayat" onclick="closeMenu()">Riwayat</a>
+      </div>
+      <div class="extra">
+        <a href="#" id="shopping-cart"
+          ><i data-feather="shopping-cart"></i>
+          <div class="tooltips">Shopping cart</div></a
+        >
+        <a href="#" id="log-in">
+          <i data-feather="log-in"></i>
+          <div class="tooltips">Log-in/Register</div></a
+        >
+        <a id="menu"
+          ><i data-feather="menu"></i>
+          <div class="tooltips">Menu</div></a
+        >
+      </div>
+      <div id="black-screen"></div>
+    </nav>
+    <!--Navbar end-->
+
+    <!--Hero section start-->
+    <section class="hero" id="home">
+      <div class="top">
+        <div class="left">Hi!</div>
+        <div class="right">
+          Sewa
+          <p>HT | Kamera</p>
+          <span>ABIANSEMAL</span>
+        </div>
+      </div>
+      <div class="bottom">
+        <a href="#">Mulai sewa</a>
+        <p>#KOMUNIKASIITUKUNCINYA</p>
+      </div>
+    </section>
+    <!--Hero section end-->
+
+    <!--Produk section start-->
+    <section class="produk" id="produk">
+      <div class="kategori-box" id="kategoriProduk">
+        <p id="namaKategori">Komunikasi</p>
+        <div class="produk-list" id="listProduk">
+          <div class="produk-detail" id="detailProduk">
+            <img
+              id="gambarProduk"
+              src="img/gambar-produk.png"
+              alt="Handy Talky"
+              loading="lazy"
+            />
+            <div class="deskripsi">
+              <h1 id="namaProduk">Handy Talky</h1>
+              <a id="sewaProduk" href="#">Sewa</a>
+            </div>
+            <p id="stokProduk">Tersedia : 1</p>
+            <p id="hargaProduk">Rp 125.000 per hari</p>
+            <a href="#" class="yelCart" id="yCart"></a>
+          </div>
+          <div class="produk-detail">
+            <img
+              id="gambarProduk"
+              src="img/gambar-produk.png"
+              alt="Handy Talky"
+              loading="lazy"
+            />
+            <div class="deskripsi">
+              <h1 id="namaProduk">Handy Talky</h1>
+              <a id="sewaProduk" href="#">Sewa</a>
+            </div>
+            <p id="stokProduk">Tersedia : 1</p>
+            <p id="hargaProduk">Rp 125.000 per hari</p>
+            <a href="#" class="yelCart" id="yCart"></a>
+          </div>
+          <div class="produk-detail">
+            <img
+              id="gambarProduk"
+              src="img/gambar-produk.png"
+              alt="Handy Talky"
+              loading="lazy"
+            />
+            <div class="deskripsi">
+              <h1 id="namaProduk">Handy Talky</h1>
+              <a id="sewaProduk" href="#">Sewa</a>
+            </div>
+            <p id="stokProduk">Tersedia : 1</p>
+            <p id="hargaProduk">Rp 125.000 per hari</p>
+            <a href="#" class="yelCart" id="yCart"></a>
+          </div>
+          <div class="produk-detail" id="produkDetail">
+            <img
+              id="gambarProduk"
+              src="img/gambar-produk.png"
+              alt="Handy Talky"
+              loading="lazy"
+            />
+            <div class="deskripsi">
+              <h1 id="namaProduk">Handy Talky</h1>
+              <a id="sewaProduk" href="#">Sewa</a>
+            </div>
+            <p id="stokProduk">Tersedia : 1</p>
+            <p id="hargaProduk">Rp 125.000 per hari</p>
+            <a href="#" class="yelCart" id="yCart"></a>
+          </div>
+        </div>
+        <a id="selengkapnya" onclick="more()">Tampilkan lebih banyak</a>
+      </div>
+    </section>
+    <!--Produk section end-->
+
+    <!--Kontak section start-->
+    <section class="kontak" id="kontak">
+      <h1>Kontak kami</h1>
+      <div class="kontak-detail">
+        <div class="google-map" id="map"></div>
+        <div class="sosmed-icon">
+          <a class="icon" id="wa"></a>
+          <a class="icon" id="ig"></a>
+          <a class="icon" id="mail"></a>
+        </div>
+      </div>
+    </section>
+    <!--Kontak section end-->
+
+    <!--Riwayat section start-->
+    <section class="riwayat" id="riwayat">
+      <h1>Riwayat</h1>
+      <div class="keterangan">
+        <p class="nomor">No</p>
+        <p class="nama" id="ketNama">Nama</p>
+        <p class="status">Status</p>
+        <p class="tanggal-sewa">Tanggal sewa</p>
+        <p class="perlengkapan">Perlengkapan</p>
+      </div>
+      <div class="data-riwayat">
+        <p class="nomor">1</p>
+        <p class="nama">
+          <a
+            >Agusssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</a
+          >
+        </p>
+        <p class="status"><a>Done</a></p>
+        <p class="tanggal-sewa">21/05/2025 - 21/05/2026</p>
+        <p class="perlengkapan">
+          <a
+            >Kamera, tripod, Handy Talky,
+            Lighppppppppppppppppppppppppppppppppppppppppppppppppting</a
+          >
+        </p>
+      </div>
+    </section>
+    <!--Riwayat section end-->
+
+    <!--Footer section start-->
+    <section class="footer">
+      <div class="middle">
+        <p>Sewa HT | Kamera Abiansemal</p>
+        <p>Sewa HT | Kamera Abiansemal</p>
+        <p>Sewa HT | Kamera Abiansemal</p>
+      </div>
+      <div class="bottom">
+        <p>Since 2025</p>
+        <p>Website by<a href="">Gussurya</a></p>
+      </div>
+    </section>
+    <!--Footer section end-->
+
+    <!-- Script, icon, and logo -->
+    <script src="script.js"></script>
+  </body>
+</html>
