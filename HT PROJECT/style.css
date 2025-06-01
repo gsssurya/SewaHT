@@ -927,7 +927,7 @@ body{
 @keyframes perkecil{
    0% {
     animation-timing-function: ease-in;
-     scale: 1.5;
+     scale: 1;
     opacity: 1;
     transform: translateY(0px);
   }
@@ -938,7 +938,7 @@ body{
     transform: translateY(210px);
   }
   50%, 100% {
-    scale: 1.5;
+    scale: 1;
     opacity: 1;
     transform: translateY(0px);
   }
