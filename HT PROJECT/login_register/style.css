@@ -1,0 +1,168 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  font-family: "Inter", sans-serif;
+  color: white;
+  overflow-x: hidden;
+  padding: 0;
+  background-color: white;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+form {
+  padding: 54px;
+  border-radius: 9px;
+  border: 1px solid rgba(29, 58, 54,0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 336px;
+  align-items: center;
+  transition: padding 0.25s, scale 0.25s;
+}
+#login, #registrasi {
+  position: absolute;
+}
+#registrasi {
+  transform: translateY(-1000px);
+}
+@keyframes  slideUp{
+  0%{
+    transform: translateY(0);
+    display: flex;
+  }
+  10%{
+    transform: translateY(0);
+    display: flex;
+  }
+  20%{
+    transform: translateY(35px);
+    display: flex;
+  }
+  70%{
+     transform: translateY(-1000px);
+     display: flex;
+  }
+  100%{
+    transform: translateY(-1000px);
+    display: none;
+  }
+}
+@keyframes slideDown{
+  0%{
+    transform: translateY(-1000px);
+    display: none;
+  }
+  50%{
+    transform: translateY(-1000px);
+    display: flex;
+  }
+  100%{
+    transform: translateY(0);
+    display: flex;
+  }
+}
+form h1{
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(29, 58, 54,0.75);
+}
+form .input-group input{
+  height: 56px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  border: 1px solid rgba(29, 58, 54,0.35);
+  padding: 0 17px;
+}
+form .input-group{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+form .input-group input:focus {
+  border : 1px solid rgba(29, 58, 54,1);
+}
+form .input-group label{
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.55);
+  left: 17px;
+  top: 10px;
+  background-color: white;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 3px;
+  transition: top 0.25s, bottom 0.25s, font-size 0.25s;
+  cursor: text;
+}
+form .input-group input:focus + label,
+form .input-group input:not(:placeholder-shown) + label {
+  top: -6px;
+  left: 17px;
+  bottom: 51.6px;
+  font-size: 12px;
+  color: rgb(29, 58, 54);
+}
+form .bottom-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 39px;
+  align-items: end;
+}
+form .bottom-wrap a{
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: text-decoration 0.25s, color 0.25s;
+}
+form .bottom-wrap a:hover {
+  text-decoration: underline;
+  color: rgb(29, 58, 54);
+}
+form .bottom-wrap button{
+  padding: 10px 30px;
+  background-color: rgba(29, 58, 54, 0.75);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+form .bottom-wrap button:hover{
+  background-color: rgba(29, 58, 54, 0.55);
+}
+/*Media Query*/
+/*Tablet*/
+@media (max-width: 980px) {
+ form{
+  scale: 0.8;
+ }
+}
+/*Mobile Phone*/
+@media (max-width: 790px) {
+  form{
+    padding: 42px;
+    scale: 0.8;
+  }
+}
