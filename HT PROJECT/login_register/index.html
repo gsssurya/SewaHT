@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Form login start-->
+    <form action="" id="login">
+      <h1>Login</h1>
+      <div class="input-group">
+        <input placeholder=" " type="text" name="" id="nomor-telepon" />
+        <label for="nomor-telepon">Nomor telepon</label>
+      </div>
+      <div class="input-group">
+        <input placeholder=" " type="text" id="kata-sandi" />
+        <label for="kata-sandi">Kata sandi</label>
+      </div>
+      <div class="bottom-wrap">
+        <a onclick="toRegis()">Belum punya akun</a>
+        <button>Login</button>
+      </div>
+    </form>
+    <!--Form login end-->
+
+    <!--Form registasi start-->
+    <form action="" id="registrasi">
+      <h1>Registrasi</h1>
+      <div class="input-group">
+        <input placeholder=" " type="text" name="" id="nomor-telepon-regis" />
+        <label for="nomor-telepon-regis">Nomor telepon</label>
+      </div>
+      <div class="input-group">
+        <input placeholder=" " type="text" name="" id="nama" />
+        <label for="nama">Nama</label>
+      </div>
+      <div class="input-group">
+        <input placeholder=" " type="text" name="" id="alamat" />
+        <label for="alamat">Alamat</label>
+      </div>
+      <div class="input-group">
+        <input placeholder=" " type="text" id="kata-sandi-regis" />
+        <label for="kata-sandi-regis">Kata sandi</label>
+      </div>
+      <div class="bottom-wrap">
+        <button>Registrasi</button>
+        <a onclick="toLogin()">Sudah punya akun</a>
+      </div>
+    </form>
+    <!--Form tegistrasi end-->
+    <script src="script.js"></script>
+  </body>
+</html>
