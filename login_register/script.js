@@ -8,6 +8,7 @@ function toLogin() {
   registrasi.style.animation = "slideUp 2s ease forwards";
 }
 function toRegis() {
+  registrasi.style.display = 'flex';
   setTimeout(() => {
     document.title = 'Registrasi';
   }, 1000);
