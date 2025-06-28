@@ -52,6 +52,7 @@ form {
 }
 #registrasi {
   transform: translateY(-1000px);
+  display: none;
 }
 @keyframes  slideUp{
   0%{
