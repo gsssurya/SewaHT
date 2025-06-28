@@ -10,31 +10,76 @@ body{
   color: white;
   overflow-x: hidden;
   padding: 0;
-  background-color: white;
   display: flex;
   height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: white;
 }
-
-
 form {
   padding: 54px;
   border-radius: 9px;
-  border: 1px solid rgba(29, 58, 54,0.35);
+  border: 1px solid rgba(29, 58, 54);
   display: flex;
   flex-direction: column;
   gap: 36px;
   width: 336px;
   align-items: center;
-  transition: scale 0.25s, padding 0.25s, transform 1s ease;
+  transition: padding 0.25s, scale 0.25s;
+  background-color: white;
+}
+#login{
+  animation: slideDown 2s ease forwards ;
+}
+
+#login, #registrasi {
+  position: absolute;
+}
+#registrasi {
+  transform: translateY(-1000px);
+}
+@keyframes  slideUp{
+  0%{
+    transform: translateY(0);
+    display: flex;
+  }
+  10%{
+    transform: translateY(0);
+    display: flex;
+  }
+  20%{
+    transform: translateY(35px);
+    display: flex;
+  }
+  70%{
+     transform: translateY(-1000px);
+     display: flex;
+  }
+  100%{
+    transform: translateY(-1000px);
+    display: none;
+  }
+}
+@keyframes slideDown{
+  0%{
+    transform: translateY(-1000px);
+    display: none;
+  }
+  50%{
+    transform: translateY(-1000px);
+    display: flex;
+  }
+  100%{
+    transform: translateY(0);
+    display: flex;
+  }
 }
 form h1{
   font-size: 32px;
   font-weight: 600;
-  color: rgba(29, 58, 54,0.75);
+  color: rgba(29, 58, 54);
 }
 form .input-group input{
   height: 56px;
@@ -100,21 +145,22 @@ form .bottom-wrap a:hover {
 }
 form .bottom-wrap button{
   padding: 10px 30px;
-  background-color: rgba(29, 58, 54, 0.75);
-  border: none;
+  background-color: rgba(29, 58, 54);
+  border: 1px solid rgb(29, 58, 54);
   border-radius: 4px;
   color: white;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.25s;
+  transition: background-color 0.25s, color 0.25s;
 }
 form .bottom-wrap button:hover{
-  background-color: rgba(29, 58, 54, 0.55);
+  background-color: rgba(29, 58, 54, 0.75);
+  border: 1px solid rgba(29, 58, 54, 0.75);
 }
-#registrasi {
-  position: absolute;
-  transform: translateY(-1000px);
+form .bottom-wrap button:active{
+  background-color: transparent;
+  color: rgb(29, 58, 54);
 }
 /*Media Query*/
 /*Tablet*/

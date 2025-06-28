@@ -50,24 +50,6 @@
       </div>
     </form>
     <!--Form tegistrasi end-->
-    <script>
-      function toLogin() {
-        document.getElementById("registrasi").style.position = "absolute";
-        document.getElementById("login").style.position = "relative";
-        document.getElementById("registrasi").style.transform =
-          "translateY(-1000px)";
-        document.getElementById("login").style.transform = "translateY(0px)";
-        document.title = "Login";
-      }
-
-      function toRegis() {
-        document.getElementById("registrasi").style.position = "relative";
-        document.getElementById("login").style.position = "absolute";
-        document.getElementById("registrasi").style.transform =
-          "translateY(0px)";
-        document.getElementById("login").style.transform = "translateY(1000px)";
-        document.title = "Registrasi";
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
