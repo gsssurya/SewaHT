@@ -242,6 +242,7 @@ kategori.forEach((kat) => {
           id="gambarProduk"
           src="${product.image}"
           alt="${product.nama}"
+          loading="lazy"
           />
           <div class="deskripsi">
           <h1 id="namaProduk">${product.nama}</h1>
