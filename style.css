@@ -1766,6 +1766,95 @@ transition: all 0.25s;
 }
 /*User popup style end*/
 
+/*Load style start*/
+.load-element .load-page{
+  position: fixed;
+  background-color: var(--dark-g);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-delay: 0.3s;
+}
+
+.load-element .logo {
+  animation: scaleUp;
+  scale: 1;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+   z-index: 10001;
+}
+
+.load-element .loading {
+  animation: detak;
+  scale: 1;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+   z-index: 10001;
+}
+
+.load-element .load {
+  animation: slowHide;
+  scale: 1;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+   z-index: 10001;
+}
+/*durasi 3 detik*/
+@keyframes detak{
+0%{
+  scale: 1;
+}
+10%{
+  scale: 1;
+}
+50%{
+  scale: 1.5;
+}
+60%{
+  scale: 1.5;
+}
+100%{
+  scale: 1;
+}
+}
+
+/*durasi 3 detik*/
+@keyframes scaleUp{
+  0%{
+    scale: 1000;
+  }
+  30%{
+    scale: 1.2;
+  }
+  80%{
+    scale: 1;
+  }
+}
+
+/*durasi 0.6s*/
+@keyframes slowHide{
+  0%{
+
+    opacity: 1;
+    scale: 1;
+  }
+  100%{
+    scale: 1000;
+    opacity: 0;
+  }
+}
+
+/*Load style end*/
+
 /*For scipt start*/
 @media (max-width: 790px){
   .show{
