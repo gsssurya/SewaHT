@@ -1923,6 +1923,16 @@ transition: all 0.25s;
   left: 0;
   text-align: end;
 }
+.pengambilan, .pengembalian{
+  position: relative;
+}
+.date-container svg{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--dark-g);
+  pointer-events: none;
+}
 @media (max-width: 790px){
   .atention{
     font-size: 14px;
