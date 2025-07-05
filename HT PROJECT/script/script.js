@@ -66,7 +66,6 @@ document.querySelector('.js-shopping-cart').addEventListener('click', () => {
     heroPageElement.style.display = 'none';
     navbar.style.backgroundColor = `rgba(28, 59, 55)`;
     window.scrollTo(0, 0);
-    saveHistory = true;
   } else {
     displayOtherPage('flex');
     history.pushState({ page: "home" }, "");
