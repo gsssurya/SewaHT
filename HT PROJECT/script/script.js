@@ -115,6 +115,7 @@ window.addEventListener("popstate", (event) => {
   }
 
   if (state?.page === "shopping-cart") {
+    summaryCartItem();
     const navbar = document.getElementById("navbar");
     const heroPageElement = document.querySelector('.hero');
     displayOtherPage('none');
