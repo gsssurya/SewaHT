@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Sewa HT | Kamera Abiansemal</title>
+    <link rel="icon" type="image/svg+xml" href="../img/logo-ht.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="checkout-page js-checkout-page" id="checkout-page">
+        <div class="pop-up-checkout-container">
+          <div class="pop-up js-popUp">
+            <a class="js-close-pop-up-checkout"><i data-feather="x"></i></a>
+            <div class="nama-user">
+              <p>Hi,</p>
+              <p> Agus!</p>
+            </div>
+            <button>WhatsApp</button>
+            <p class="deskripsi">Silahkan menuju WhatsApp untuk melakukan konfirmasi dan pembayaran pesanan, terimakasih.</p>
+          </div>
+        </div>
+        <div class="top-pad"></div>
+        <div class="bottom-pad"></div>
+        <div class="keterangan">
+          <p class="daftarItem">Daftar item</p>
+          <p class="hargaItem">Harga/24 jam</p>
+          <p class="jumlahItem">Jumlah</p>
+          <p class="totalHarga">Total harga</p>
+        </div>
+        <div class="checkout-action-container">
+            <span class="js-atention atention"></span>
+          <div class="date-container">
+            <div class="pengambilan">
+              Pengambilan
+              <input class="date js-ambil-date" type="date" name="" id="tanggalPengambilan">
+                <i data-feather="calendar"></i>
+            </div>
+            <div class="pengembalian">
+              Pengembalian
+              <input class="date js-kembali-date" type="date" name="" id="tanggalPengembalian">
+                <i data-feather="calendar"></i>
+            </div>
+          </div>
+          <div class="sub-total-container">
+            <div class="subtotal">
+              Sub total :
+              <p class="sub-total-price js-sub-total-element">-</p>
+            </div>
+            <button class="checkout-button js-checkout-popup-button">Checkout</button>
+          </div>
+        </div>
+        <div class="checkout-item-container js-cart-item-container">
+        </div>
+      </section>
+      <script type="module" src="sewa.js"></script>
+</body>
+</html>
