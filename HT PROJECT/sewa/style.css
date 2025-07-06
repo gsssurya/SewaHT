@@ -651,5 +651,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .pop-up-show{
   animation: popUpAnimation 0.5s ease backwards;
 }
-
+@media (max-width: 790px){
+  .pengambilan input, .pengembalian input{
+    width: 120px;
+  }
+  .atention{
+    font-size: 14px;
+    top: -22px;
+    right: 24px;
+  }
+}
 /*Checkout style end*/
