@@ -182,7 +182,7 @@ document.querySelectorAll('.js-action-sewa').forEach((button) => {
       item[0].quantity = 1;
     }
     saveItemLocalStorage();
-    window.location.href = "sewa/index.html";
+    window.location.href = "HT%20PROJECT/sewa/index.html";
   })
 })
 
