@@ -155,7 +155,7 @@ kategori.forEach((kat) => {
           />
           <div class="deskripsi">
           <h1 id="namaProduk">${product.nama}</h1>
-          <a id="sewaProduk" class="js-action-sewa" data-product-id = "${product.id}">Sewa</a>
+          <a href="sewa/index.html" id="sewaProduk" class="js-action-sewa" data-product-id = "${product.id}">Sewa</a>
           </div>
           <p id="stokProduk">Tersedia : ${product.tersedia}</p>
           <p id="hargaProduk">Rp ${formatingMoney(product.harga)}/24 jam</p>
@@ -182,7 +182,6 @@ document.querySelectorAll('.js-action-sewa').forEach((button) => {
       item[0].quantity = 1;
     }
     saveItemLocalStorage();
-    window.location.href = "sewa/index.html";
   })
 })
 
