@@ -1,0 +1,312 @@
+.logo-tupai{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+  pointer-events: none;
+}
+.logo-tupai svg {
+  width: 100%;
+  height: 100%;
+  scale: 1.5;
+  opacity: 0.03;
+}
+a{
+  display: flex;
+  align-items: center;
+  outline: none;
+  text-decoration: none;
+  justify-content: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  overflow-x: scroll;
+  min-width: 373px;
+}
+
+/*Style admin start*/
+.admin-page-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    background-color: white;
+}
+.admin-page-container .section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+}
+.admin-page-container .section h1{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 48px;
+    color: rgba(29, 58, 54, 0.75);
+    bottom: 40px;
+    z-index: 100;
+    transition: all 0.25s;
+}
+.admin-page-container .section h1::before{
+    content: '';
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    right: 0;
+    height: 100px;
+    top: 0;
+    background-color: white;
+}
+.admin-page-container .section a{
+    height: 56px;
+    width: 215px;
+    position: relative;
+    cursor: pointer;
+    color: black;
+    transition: all 0.25s;
+}
+.admin-page-container .section a svg{
+    scale: 1.5;
+    transition: all 0.25s;
+}
+.admin-page-container .section .add-produk{
+    background-color: black;
+    color: white;
+    border-top-right-radius: 50px;
+}
+.admin-page-container .section .shopping-admin{
+    background-color: #FFC40C;
+    border-top-left-radius: 50px;
+}
+.admin-page-container .keterangan{
+    display: grid;
+    grid-template-columns: 100px 400px repeat(4, minmax(0, 1fr));
+    height: 60px;
+    align-items: center;
+    background-color: rgb(255, 196, 12);
+    margin-top: 56px;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    transition: all 0.25s;
+}
+.admin-page-container .keterangan p{
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    color: white;
+}
+.admin-page-container .keterangan p::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height:calc(100vh - 160px);
+    pointer-events: none;
+    border-right: 1px solid #FFC40C;
+}
+.keterangan p.no-border::before {
+  border: none;
+}
+.admin-page-container .keterangan  p div{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -99;
+    border-right: 1px #FFC40C solid;
+    background-color: black;
+}
+.item-grid{
+    margin-top: 116px;
+    min-height: calc(100vh - 216px);
+    background-color: rgba(0,0,0,0.03);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+.item-grid .detail-item{
+    display: grid;
+    grid-template-columns: 100px 400px repeat(4, minmax(0, 1fr));
+    text-align: center;
+    padding: 24px 0;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background-color: rgba(255, 196, 12, 0.1);
+    transition: all 0.25s;
+}
+.save-button{
+    position: fixed;
+    right: 48px;
+    bottom: 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFC40C;
+    border-radius: 50%;
+    color: white;
+    z-index: 101;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.save-button:hover{
+    background-color: #ffcf3f;
+}
+.save-button:active{
+    scale: 1.2;
+}
+.home-page{
+    position: fixed;
+    bottom: 48px;
+    left: 0;
+    z-index: 101;
+    height: 55px;
+    width: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+}
+.home-page:hover{
+    border: 1px solid rgba(29, 58, 54);
+    width: 94px;
+    height: 53px;
+}
+.home-page svg{
+    scale: 0.5;
+    transition: all 0.15s;
+}
+.home-page:active svg {
+    transform: scale(1.2);
+}
+.list-item{
+    display: flex;
+    align-items: start;
+    padding: 0 16px;
+    flex-direction: column;
+    gap: 8px;
+}
+.list-item .item-detail {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    padding: 3px 0;
+    border-bottom: 1px solid black;
+}
+.list-item .item-detail p{
+    text-align:justify;
+}
+.detail-item-select{
+    height: 28px;
+    width: 100px;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    text-align: center;
+    background-color: white;
+    transition: all 0.25s;
+}
+.tanggal-phone{
+    display: none;
+}
+@media (max-width: 1100px){
+    .item-grid .detail-item, 
+    .admin-page-container .keterangan{
+        grid-template-columns: 70px 250px repeat(4, minmax(0, 1fr));
+    }
+    .admin-page-container .keterangan p{
+        font-size: 14px;
+    }
+    .item-grid .detail-item{
+        font-size: 12px;
+    }
+    .admin-page-container .section a svg{
+        scale: 1.2;
+    }
+    .admin-page-container .section a{
+        width: 150px;
+    }
+    .admin-page-container .section h1 {
+        font-size: 36px;
+        bottom: 60px;
+    }
+    .detail-item-select{
+        width: 80px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 745px){
+    .admin-page-container .section a{
+        width: 120px;
+        height: 42px;
+    }
+    .admin-page-container .section{
+        top: 114.5px;
+    }
+    .admin-page-container .section h1{
+        font-size: 28px;
+    }
+    .tanggal-phone {
+        display: block;
+    }
+    .tanggal-phone span {
+        color: red;
+    }
+    .tanggal-pc{
+        display: none;
+    }
+    .item-grid .detail-item .detail-select-box{
+        position: absolute;
+        right: 0px;
+        bottom: 24px;
+    }
+    .detail-item-select{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+    .admin-page-container .keterangan .ket-status{
+        display: none;
+    }
+    .item-grid .detail-item, 
+    .admin-page-container .keterangan{
+         grid-template-columns: 50px minmax(140px, 1fr) repeat(2, minmax(0, 1fr));
+    }
+    .admin-page-container .keterangan{
+        height: 42px;
+    }
+    .item-grid{
+        margin-top: 98px;
+    }
+    .admin-page-container .section h1::before{
+        height: 114.5px;
+    }
+}  
+/*Style admin end*/

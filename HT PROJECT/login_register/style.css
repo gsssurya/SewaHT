@@ -1,0 +1,218 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.logo-tupai{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+}
+.logo-tupai svg {
+  width: 100%;
+  height: 100%;
+  scale: 1.5;
+  opacity: 0.03;
+}
+body{
+  font-family: "Inter", sans-serif;
+  color: white;
+  overflow-x: hidden;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+}
+form {
+  padding: 54px;
+  border-radius: 9px;
+  border: 1px solid rgba(29, 58, 54, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 336px;
+  align-items: center;
+  transition: padding 0.25s, scale 0.25s;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.15);
+}
+
+#login, #registrasi {
+  position: absolute;
+}
+#registrasi {
+  transform: translateY(-1000px);
+  display: none;
+}
+@keyframes  slideUp{
+  0%{
+    transform: translateY(0);
+    display: flex;
+  }
+  10%{
+    transform: translateY(0);
+    display: flex;
+  }
+  20%{
+    transform: translateY(35px);
+    display: flex;
+  }
+  70%{
+     transform: translateY(-1000px);
+     display: flex;
+  }
+  100%{
+    transform: translateY(-1000px);
+    display: none;
+  }
+}
+@keyframes slideDown{
+  0%{
+    transform: translateY(-1000px);
+    display: none;
+  }
+  50%{
+    transform: translateY(-1000px);
+    display: flex;
+  }
+  100%{
+    transform: translateY(0);
+    display: flex;
+  }
+}
+form h1{
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(29, 58, 54);
+}
+form .input-group input{
+  height: 56px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  border: 1px solid rgba(29, 58, 54,0.35);
+  padding: 0 17px;
+  background-color: transparent;
+}
+form .input-group{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+form .input-group input:focus {
+  border : 1px solid rgba(29, 58, 54,1);
+}
+form .input-group label{
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.55);
+  left: 17px;
+  top: 10px;
+  background-color: transparent;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 3px;
+  transition: top 0.25s, bottom 0.25s, font-size 0.25s;
+  cursor: text;
+}
+form .input-group input:focus + label,
+form .input-group input:not(:placeholder-shown) + label {
+  top: -6px;
+  left: 17px;
+  bottom: 51.6px;
+  font-size: 12px;
+  color: rgb(29, 58, 54);
+  background-color: white;
+}
+form .bottom-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 39px;
+  align-items: end;
+}
+form .bottom-wrap a{
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: text-decoration 0.25s, color 0.25s;
+}
+form .bottom-wrap a:hover {
+  text-decoration: underline;
+  color: rgb(29, 58, 54);
+}
+form .bottom-wrap button{
+  padding: 10px 30px;
+  background-color: rgba(29, 58, 54);
+  border: 1px solid rgb(29, 58, 54);
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+form .bottom-wrap button:hover{
+  background-color: rgba(29, 58, 54, 0.75);
+  border: 1px solid rgba(29, 58, 54, 0.75);
+}
+form .bottom-wrap button:active{
+  background-color: transparent;
+  color: rgb(29, 58, 54);
+}
+/*Media Query*/
+/*Tablet*/
+@media (max-width: 980px) {
+ form{
+  scale: 0.8;
+ }
+}
+/*Mobile Phone*/
+@media (max-width: 790px) {
+  .logo-tupai{
+    height: 1200px;
+    width: 1000px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  form{
+    padding: 42px;
+    scale: 0.8;
+  }
+}
+.hide-pw{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: rgb(29, 58, 54);
+  right: 17px;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 0.25s;
+  background-color: white;
+  padding: 0 2px;
+  border-radius: 20px;
+}
+
